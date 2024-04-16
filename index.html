@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Ruddarr</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.typekit.net/apu7dqh.css">
+        <style>
+            html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+            body, html { height:100%; }
+            body { margin: 0; padding: 2.625rem; box-sizing: border-box; font-family: 'Cronos Pro', cronos-pro, Calibri, Helvetica, sans-serif; font-weight: 300; font-size: 16px; line-height: 1.5; background: #f0efe8; color: #474747; -webkit-transition: all .3s ease; transition: all .3s ease; }
+            body:before { position: absolute; display: block; top: 0; left: 0; width: 100%; height: .625rem; content: ''; background: #00f; }
+            a:link, a:visited { text-decoration: none; background-color: transparent; color: #00f; -webkit-transition: color .2s linear; transition: color .2s linear; }
+            a:active, a:focus, a:hover { color: #00f; }
+            h1 { margin:0 0 1rem; font-size: 2.625rem; font-weight: 300; line-height: 1.2; }
+            strong { font-weight: 400; }
+            p { margin: 1rem 0; font-size: 1.625rem; }
+            .container { display: table; margin: 0 auto; height: 100%; max-width: 47rem; }
+            .content { display: table-cell; vertical-align: middle; }
+            .mt-2 { margin-top: 2rem; }
+            .email:before { content: attr(data-domain) '@' attr(data-local); unicode-bidi: bidi-override; direction: rtl; }
+            @media (max-width: 599px) {
+                body { padding:1.5rem }
+                h1 { font-size:2rem }
+                p { font-size:1.25rem }
+            }
+            @media (max-width: 374px) {
+                body { padding: 2rem 1rem; }
+                strong:before { content: '\a'; white-space: pre; }
+            }
+            @media (prefers-color-scheme: dark) {
+                body { background: #333; color: #cbcbcb; }
+                strong { color: #e2e2e2; }
+            }
+            ::-moz-selection { background: #00f; color: #fff; }
+            ::selection { background: #00f; color: #fff; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <h1>
+                    Hi! We’re <strong>Ruddarr</strong>.
+                </h1>
+                <p>
+                    We create native mobile applications that help you manage your <i>*arr</i> stack.
+                </p>
+                <p>
+                    You can us on <a href="https://github.com/ruddarr/app">GitHub</a> and <a href="https://discord.gg/UksvtDQUBA">Discord</a>, or email us at
+                    <span class="email" data-local="rraddur" data-domain="moc.duolci"></span>.
+                </p>
+            </div>
+        </div>
+
+        <script>
+            var span = document.querySelector('.email');
+            var email = [span.dataset.local.split('').reverse().join(''), span.dataset.domain.split('').reverse().join('')].join('@');
+            var link = document.createElement('a');
+            var text = document.createTextNode(email);
+            link.setAttribute('href', 'mailto:' + email);
+            link.appendChild(text);
+            span.parentNode.replaceChild(link, span);
+        </script>
+    </body>
+</html>
